@@ -1,9 +1,11 @@
 def oxford_comma(array)
-counter = 1
-array.each do |word|
-  puts "#{word}"
-  puts array.join(" and ")
-  puts array. join(" , " " , " " ,and ")
-  counter += 1
+if array.length == 2
+  array[-2] << " and "
+  array.join
+elsif array.length == 1
+  array.join
+else array.length > 2
+  array[-1].prepend "and "
+  array.join(", ")
 end
 end
